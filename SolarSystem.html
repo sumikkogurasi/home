@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarSystem</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            /* display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://wallpapercave.com/wp/wp2610854.png');;
+            background-size: 300px 300px;
+        }
+
+        .sun{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #fdd835;
+            border-radius: 50%;
+            box-shadow: 0 0 50px #fdd835;
+            animation: rotate-sun 30s infinite linear;
+        }
+
+        .ring {
+          content: "";
+          position: absolute;
+          border: 1px dashed rgba(255, 255, 255, 0.5);   
+          transform: rotate(0);    
+          box-shadow: none;
+        }
+
+        .earth{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #2196f3;
+            top: 50%;
+            left: 50%;
+            transform-origin: top left;
+            animation: rotate-earth 30s infinite linear;
+        }
+
+        .moon{
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #bdbdbd;
+            top: 50%;
+            left: 50%;
+            transform-origin: top left;
+            animation: rotate-moon 6s infinite linear;
+        }
+
+        /* .earth::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            border: 1px dashed rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            box-sizing:border-box;
+            transform-origin: 0 0;
+            transform: translate(-50%, -50%);
+        } */
+        .sun > .ring {
+            top: 50%;
+            left: 50%;
+            width: 650px;
+            height: 650px;
+            border-radius: 50%;
+            box-sizing:border-box;
+            transform-origin: 0 0;
+            transform: translate(-50%, -50%);
+        }        
+
+        .earth > .ring {
+            top: 50%;
+            left: 50%;
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            box-sizing:border-box;
+            transform-origin: 0 0;
+            transform: translate(-50%, -50%);
+        }
+
+        @keyframes rotate-sun {
+            0%{
+                transform: rotate(0deg) translateX(0px);
+            }
+
+            100%{
+                transform: rotate(360deg) translateX(0px);
+            }
+        }
+
+        @keyframes rotate-earth {
+            0%{
+                transform: rotate(0deg) translateX(300px);
+            }
+
+            100%{
+                transform: rotate(360deg) translateX(300px);
+            }
+        }
+
+        @keyframes rotate-moon{
+            0%{
+                transform: rotate(0deg) translateX(100px);
+            }
+
+            100%{
+                transform: rotate(360deg) translateX(100px);
+            }        
+        }
+
+    </style>
+</head>
+<body>
+    <div class ="sun">
+        <div class ="ring"></div>
+        <div class ="ring"></div>
+        <div class = "earth">
+            <div class="ring"></div>
+            <div class = "moon"></div>
+        </div>
+    </div>
+</body>
+</html>
