@@ -1,7 +1,23 @@
 /* Reset some default browser styles */
-body, h1, h2, p, ul {
+body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
+}
+
+body {
+  counter-reset: h-counter; /* カウンターをリセット */
+}
+
+h2,h3,h4 {
+    font-size: 36px;   /* 数字を大きくすると文字も大きくなる */
+    color: #999;  
+    counter-increment: h-counter;
+}
+
+h2::before, h3::before, h4::before {
+    content: counter(h-counter) ". "; /* 番号＋ピリオドを表示 */
+    color: #999;    /* 番号の色（任意） */
+    margin-right: 8px;
 }
 
 /* Header styles */
@@ -29,6 +45,44 @@ nav a {
 /* Main content styles */
 .main-content {
     padding: 20px;
+}
+
+.main-content h2, h3, h4 {
+  margin-bottom: 0px; /* h3 の下の余白を狭く */
+}
+
+.main-content ul {
+  list-style-type: disc; 
+  padding-left: 50px;   /* 左のインデント */
+  margin-top: 0;        /* 上の余白をほぼゼロ */
+  margin-bottom: 0px;   /* 下の余白 */
+}
+
+.main-content li {
+  display: list-item;      /* 箇条書きとして表示 */
+  margin-bottom: 0px;      /* 各項目の間に余白 */
+}
+
+.main-content > ul > li {
+  text-decoration: underline;  /* 文字の下に線 */
+  margin-bottom: 6px;          /* 下の余白 */
+}
+
+.main-content ul ul li {
+  text-decoration: none;       /* 子リストは下線なし */
+  margin-bottom: 2px;
+}
+
+section {
+  border-bottom: 1px solid #ccc;  /* 下に薄い線 */
+  padding-bottom: 20px;           /* 線と内容の間隔 */
+  margin-bottom: 20px;            /* 次のセクションとの間隔 */
+}
+
+/* 最後の section は線を消す */
+section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
 }
 
 /* Footer styles */

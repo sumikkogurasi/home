@@ -4,32 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>えびふらいちゃん！のウェブサイト！</title>
 </head>
 <body>
-    <header>
+    <header id="home">
         <h1>えびふらいちゃん！のウェブサイトへようこそ！</h1>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#about">このサイトについて</a></li>
+                <li><a href="#works">作品一覧</a></li>
+                <li><a href="#links">外部リンク</a></li>
             </ul>
         </nav>
     </header>
+
     <section class="main-content">
         <h2>このサイトについて</h2>
-        <p id="content">備忘録を書いていくよぉ！</p>
-        <p><a href="https://ebifly-chan.hatenablog.com">解説ブログ</a></p>
-        <p><a href="animation01.html">2023/08/20 アニメーションサンプル01</a></p>
-        <p><a href="SolarSystem.html">2023/09/03 太陽系テスト</a></p>
-        <p><a href="SimpleQuiz.html">2023/09/04 簡単なクイズ</a></p>
-        <p><a href="EnglishQuiz.html">2023/09/05 英語クイズ</a></p>
-        <p><a href="TypingGame01.html">2023/09/05 タイピングゲーム</a></p>
-        <p><a href="TypingGame02.html">2023/09/06 タイピングゲーム2</a></p>
-
+        <p id="content">日常で作ったものを残していくよ！</p>
     </section>
+
+    <section class="main-content" id="works">
+        <h3>作品一覧</h3>
+        <ul>
+            <li>htmlアート
+                <ul>
+                    <li><a href="animation01.html">2023/08/20 アニメーションサンプル01</a></li>
+                    <li><a href="SolarSystem.html">2023/09/03 太陽系テスト</a></li>
+                    <li><a href="SimpleQuiz.html">2023/09/04 簡単なクイズ</a></li>
+                    <li><a href="EnglishQuiz.html">2023/09/05 英語クイズ</a></li>
+                    <li><a href="TypingGame01.html">2023/09/05 タイピングゲーム</a></li>
+                    <li><a href="TypingGame02.html">2023/09/06 タイピングゲーム2</a></li>
+                </ul>
+            <li>stellaris関連
+                <ul>
+                    <li><a href="stellaris/tech_tree/stellaris_tech_tree.svg">2025/09/01 ステラリスのテックツリー</a></li>
+                </ul>
+        </ul>
+    </section>
+
+    <section class="main-content" id="links">
+        <h4>外部リンク</h4>
+            <ul>
+                <li><a href="https://ebifly-chan.hatenablog.com">解説ブログ</a></li>
+            </ul>
+    </section>
+
     <footer>
         <p>&copy; 2023 EbiflyChan Homepage. All rights reserved.</p>
     </footer>
