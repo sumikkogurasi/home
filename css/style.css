@@ -47,42 +47,44 @@ nav a {
     padding: 20px;
 }
 
-.main-content h2, h3, h4 {
-  margin-bottom: 0px; /* h3 の下の余白を狭く */
+/* セクション全体の余白をさらに小さく */
+section {
+  border-bottom: 1px solid #ccc;  /* 下線 */
+  padding: 0;                     /* 内側余白をゼロ */
+  margin: 0 0 6px 0;              /* 下マージンをさらに縮小 */
 }
 
+/* 最後の section は線も余白もなし */
+section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+/* 見出しの余白を最小化 */
+.main-content h2, 
+.main-content h3, 
+.main-content h4 {
+  margin: 0 0 2px 0;  /* 下余白2pxに統一 */
+}
+
+/* ul の上下の余白をさらに縮小 */
 .main-content ul {
-  list-style-type: disc; 
-  padding-left: 50px;   /* 左のインデント */
-  margin-top: 0;        /* 上の余白をほぼゼロ */
-  margin-bottom: 0px;   /* 下の余白 */
+  margin: 0 0 2px 0;    /* 上0 下2px */
+  padding-left: 50px;   /* 左インデントはそのまま */
 }
 
 .main-content li {
-  display: list-item;      /* 箇条書きとして表示 */
-  margin-bottom: 0px;      /* 各項目の間に余白 */
+  margin: 0 0 1px 0;    /* li の間隔1px */
 }
 
 .main-content > ul > li {
-  text-decoration: underline;  /* 文字の下に線 */
-  margin-bottom: 6px;          /* 下の余白 */
+  text-decoration: underline;  /* 文字下線 */
+  margin-bottom: 2px;          /* 下余白を最小限に */
 }
 
 .main-content ul ul li {
   text-decoration: none;       /* 子リストは下線なし */
-  margin-bottom: 2px;
-}
-
-section {
-  border-bottom: 1px solid #ccc;  /* 下に薄い線 */
-  padding-bottom: 20px;           /* 線と内容の間隔 */
-  margin-bottom: 20px;            /* 次のセクションとの間隔 */
-}
-
-/* 最後の section は線を消す */
-section:last-of-type {
-  border-bottom: none;
-  margin-bottom: 0;
+  margin-bottom: 1px;
 }
 
 /* Footer styles */
